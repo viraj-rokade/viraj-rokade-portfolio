@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { FiDownload, FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FiArrowDown, FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { personalInfo } from '../data/portfolio'
 import ParticleField from './ParticleField'
 import styles from './Hero.module.css'
@@ -62,8 +62,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          Hi, I'm{' '}
-          <span className={styles.name}>{personalInfo.name}</span>
+          Hi, I'm <span className={styles.name}>{personalInfo.name}</span>
         </motion.h1>
 
         <motion.div
@@ -72,10 +71,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <span className={styles.rolePrefix}>{'< '}</span>
+          <span className={styles.rolePrefix}>{"< "}</span>
           <span className={styles.role}>{displayText}</span>
           <span className={styles.cursor}>|</span>
-          <span className={styles.rolePrefix}>{' />'}</span>
+          <span className={styles.rolePrefix}>{" />"}</span>
         </motion.div>
 
         <motion.p
@@ -118,15 +117,19 @@ export default function Hero() {
           <button className="btn btn-primary" onClick={scrollToAbout}>
             Explore My Work <FiArrowRight />
           </button>
-          <a href="#contact" className="btn btn-outline" onClick={(e) => {
-            e.preventDefault()
-            const el = document.getElementById('contact')
-            if (el) {
-              const y = el.getBoundingClientRect().top + window.scrollY - 80
-              window.scrollTo({ top: y, behavior: 'smooth' })
-            }
-          }}>
-            <FiDownload /> Get In Touch
+          <a
+            href="#contact"
+            className="btn btn-outline"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("contact");
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
+          >
+            <FiArrowDown /> Get In Touch
           </a>
         </motion.div>
 
@@ -136,10 +139,22 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.4 }}
         >
-          <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
+          <a
+            href={personalInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialLink}
+            aria-label="LinkedIn"
+          >
             <FiLinkedin size={20} />
           </a>
-          <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
+          <a
+            href={personalInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialLink}
+            aria-label="GitHub"
+          >
             <FiGithub size={20} />
           </a>
         </motion.div>
@@ -158,5 +173,5 @@ export default function Hero() {
         <span>Scroll Down</span>
       </motion.div>
     </section>
-  )
+  );
 }
