@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { FiArrowDown, FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FiMail, FiArrowRight, FiGithub, FiLinkedin } from "react-icons/fi";
 import { personalInfo } from '../data/portfolio'
 import ParticleField from './ParticleField'
 import styles from './Hero.module.css'
@@ -129,7 +129,7 @@ export default function Hero() {
               }
             }}
           >
-            <FiArrowDown /> Get In Touch
+            <FiMail /> Get In Touch
           </a>
         </motion.div>
 
