@@ -186,7 +186,7 @@ export const experiences: Experience[] = [
     subtitle: 'Student Council Committee Head',
     organization: 'University of Mumbai',
     location: 'Mumbai, India',
-    period: '2013 - May 2017',
+    period: 'Aug 2013 - May 2017',
     description: 'Studied core computer engineering principles including data structures, algorithms, databases, and software engineering.',
     highlights: [
       'Computer Engineering Fundamentals',
